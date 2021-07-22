@@ -1,0 +1,17 @@
+{
+  "projectName": "shell",
+  "version": "3.1",
+  "frontend": "javascript",
+  "javascript": {
+    "framework": "ionic",
+    "config": {
+      "SourceDir": "src",
+      "DistributionDir": "dist",
+      "BuildCommand": "npm run nx build shell",
+      "StartCommand": "npm run nx serve shell"
+    }
+  },
+  "providers": [
+    "awscloudformation"
+  ]
+}

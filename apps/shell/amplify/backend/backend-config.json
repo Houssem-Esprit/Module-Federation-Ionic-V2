@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "shell3ecd1fec": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}

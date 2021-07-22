@@ -1,0 +1,12 @@
+<ion-app>
+  <amplify-authenticator *ngIf="authState !== 'signedin'">
+    <amplify-sign-up header-text="My Custom Sign Up Text" slot="sign-up"></amplify-sign-up>
+    <amplify-sign-in header-text="My Custom Sign In Text" slot="sign-in"></amplify-sign-in>
+  </amplify-authenticator>
+
+  <div *ngIf="authState === 'signedin' && user" class="App">
+    <amplify-sign-out></amplify-sign-out>
+    <ion-router-outlet></ion-router-outlet>
+    <!-- This is where you application template code goes -->
+  </div>
+</ion-app>

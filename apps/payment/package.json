@@ -1,0 +1,6 @@
+{
+  "name": "payment",
+  "devDependencies": {
+    "@capacitor/cli": "^2.4.5"
+  }
+}

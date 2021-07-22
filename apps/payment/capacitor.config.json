@@ -1,0 +1,13 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "payment",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "../../dist/apps/payment",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}

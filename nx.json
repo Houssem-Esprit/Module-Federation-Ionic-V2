@@ -1,0 +1,75 @@
+{
+  "npmScope": "module-federation-ionic",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    ".eslintrc.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      }
+    }
+  },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
+  },
+  "projects": {
+    "business": {
+      "tags": []
+    },
+    "business-e2e": {
+      "tags": [],
+      "implicitDependencies": ["business"]
+    },
+    "business-feature-home-page": {
+      "tags": []
+    },
+    "payment": {
+      "tags": []
+    },
+    "payment-e2e": {
+      "tags": [],
+      "implicitDependencies": ["payment"]
+    },
+    "payment-feature-payment-payment": {
+      "tags": []
+    },
+    "personel": {
+      "tags": []
+    },
+    "personel-e2e": {
+      "tags": [],
+      "implicitDependencies": ["personel"]
+    },
+    "personel-feature-home-page": {
+      "tags": []
+    },
+    "shell": {
+      "tags": []
+    },
+    "shell-e2e": {
+      "tags": [],
+      "implicitDependencies": ["shell"]
+    },
+    "test": {
+      "tags": []
+    },
+    "test-e2e": {
+      "tags": [],
+      "implicitDependencies": ["test"]
+    }
+  }
+}
