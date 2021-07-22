@@ -1,0 +1,84 @@
+version: 1
+applications:
+  - appRoot: apps/shell
+    env:
+    variables:
+      #AMPLIFY_DIFF_DEPLOY: true
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - npm install
+        build:
+          commands:
+            - npm run nx build shell
+      artifacts:
+        #discard-paths: yes
+        baseDirectory: ../../dist/apps/shell
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - node_modules/**/*
+  - appRoot: apps/business
+    env:
+    variables:
+      #AMPLIFY_DIFF_DEPLOY: true
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - ls *
+            - npm install
+        build:
+          commands:
+            - ls *
+            - npm run nx build business
+      artifacts:
+        #discard-paths: yes
+        baseDirectory: ../../dist/apps/business
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - node_modules/**/*
+  - appRoot: apps/personel
+    env:
+    variables:
+      #AMPLIFY_DIFF_DEPLOY: true
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - npm install
+        build:
+          commands:
+            - npm run nx build personel
+      artifacts:
+        #discard-paths: yes
+        baseDirectory: ../../dist/apps/personel
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - node_modules/**/*
+  - appRoot: apps/payment
+    env:
+    variables:
+      #AMPLIFY_DIFF_DEPLOY: true
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - npm install
+        build:
+          commands:
+            - npm run nx build payment
+      artifacts:
+        #discard-paths: yes
+        baseDirectory: ../../dist/apps/payment
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - node_modules/**/*
