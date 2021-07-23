@@ -1,5 +1,5 @@
 {
-  "appId": "io.ionic.starter",
+  "appId": "confledis.congopay.shell",
   "appName": "shell",
   "bundledWebRuntime": false,
   "npmClient": "npm",
