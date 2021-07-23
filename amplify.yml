@@ -12,6 +12,12 @@ applications:
         build:
           commands:
             - npm run nx build shell
+        postBuild:
+          commands:
+            - npm run nx generate @nxtend/capacitor:capacitor-project --project shell --npmClient npm --appId confledis.congopay.shell --webDir ../../dist/apps/shell --appName shell
+            - npm run nx run shell:add:android
+            - npm run nx run shell:sync:android
+            - npm run nx run shell:open:android
       artifacts:
         #discard-paths: yes
         baseDirectory: ../../dist/apps/shell
