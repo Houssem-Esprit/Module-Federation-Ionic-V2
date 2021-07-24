@@ -1,0 +1,13 @@
+{
+	"appId": "confledis.congopay.shell",
+	"appName": "shell",
+	"bundledWebRuntime": false,
+	"npmClient": "npm",
+	"webDir": "../../dist/apps/shell",
+	"plugins": {
+		"SplashScreen": {
+			"launchShowDuration": 0
+		}
+	},
+	"cordova": {}
+}
