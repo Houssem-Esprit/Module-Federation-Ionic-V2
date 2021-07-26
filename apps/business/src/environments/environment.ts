@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  PAYMENT_APP_ENDPOINT: "http://localhost:5003/"
+  PAYMENT_APP_ENDPOINT: "http://localhost:5003/",
+  BUSINESS_APP_ENDPOINT: "http://localhost:5001/"
+
 };
 
 /*

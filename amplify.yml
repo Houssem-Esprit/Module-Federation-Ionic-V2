@@ -8,15 +8,19 @@ applications:
       phases:
         preBuild:
           commands:
+            - ls
+            - npm install
+            - cd ../..
             - npm install
         build:
           commands:
-            - npm run nx build shell
+            - npm run nx build shell --verbose
         postBuild:
           commands:
             - npm run nx run shell:add:android
+            - npm run nx run shell:copy:android
             - npm run nx run shell:sync:android
-            - npm run nx run shell:open:android
+            #- npm run nx run shell:open:android
       artifacts:
         #discard-paths: yes
         baseDirectory: ../../dist/apps/shell
@@ -33,11 +37,11 @@ applications:
       phases:
         preBuild:
           commands:
-            - ls *
+            - ls
             - npm install
         build:
           commands:
-            - ls *
+            - ls
             - npm run nx build business
       artifacts:
         #discard-paths: yes

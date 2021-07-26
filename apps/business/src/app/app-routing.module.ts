@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { ModuleWithProviders, NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { environment } from '../environments/environment';
 import { loadRemoteModule } from '@angular-architects/module-federation';
@@ -7,6 +7,7 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () =>
+      // eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
       import('../../../../libs/business/feature/home-page/src/lib/business-feature-home-page.module').then((m) => m.BusinessFeatureHomePageModule),
   },
   {
@@ -25,9 +26,17 @@ const routes: Routes = [
 }, 
 ];
 
+function loadSpecificRouterModule(routes:Routes):ModuleWithProviders<RouterModule>{
+  if(window.location.href.includes(environment.BUSINESS_APP_ENDPOINT)){
+    return RouterModule.forRoot(routes);
+  }else {
+    return RouterModule.forChild(routes);
+  }
+ }
+
 @NgModule({
   imports: [
-    RouterModule.forChild(routes),
+    loadSpecificRouterModule(routes),
   ],
   exports: [RouterModule],
 })
