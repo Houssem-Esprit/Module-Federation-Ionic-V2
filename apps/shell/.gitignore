@@ -1,5 +1,5 @@
 node_modules
-
+android
 #amplify
 amplify/\#current-cloud-backend
 amplify/.config/local-*

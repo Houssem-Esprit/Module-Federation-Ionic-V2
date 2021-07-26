@@ -7,6 +7,7 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () =>
+      // eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
       import('../../../../libs/business/feature/home-page/src/lib/business-feature-home-page.module').then((m) => m.BusinessFeatureHomePageModule),
   },
   {
@@ -27,7 +28,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forChild(routes),
+    RouterModule.forRoot(routes),
   ],
   exports: [RouterModule],
 })

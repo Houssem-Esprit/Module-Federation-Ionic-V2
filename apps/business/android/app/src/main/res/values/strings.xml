@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">business</string>
+    <string name="title_activity_main">business</string>
+    <string name="package_name">confledis.congopay.business</string>
+    <string name="custom_url_scheme">confledis.congopay.business</string>
+</resources>

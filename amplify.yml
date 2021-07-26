@@ -8,17 +8,16 @@ applications:
       phases:
         preBuild:
           commands:
-            - ls *
+            - ls
+            - npm install
             - cd ../..
             - npm install
         build:
           commands:
-            - ls *
+            - ls
             - npm run nx build shell --verbose
-            - cd apps/shell
         postBuild:
           commands:
-            - npm install
             - npm run nx run shell:add:android
             - npm run nx run shell:sync:android
             #- npm run nx run shell:open:android
