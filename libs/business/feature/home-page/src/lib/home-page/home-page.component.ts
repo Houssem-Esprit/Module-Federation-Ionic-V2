@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+//import {environment} from '@env-business/environment';
 
 @Component({
   selector: 'module-federation-ionic-home-page',
@@ -14,6 +15,10 @@ export class HomePageComponent implements OnInit {
   }
 
   onSubmit(){
-    this.router.navigate(['/payment']);
+    if(this.router.url.includes('business')){
+     this.router.navigate(['business/payment']);
+    }else {
+     this.router.navigate(['/payment']);
+    }
   }
 }

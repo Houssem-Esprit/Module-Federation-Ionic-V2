@@ -26,9 +26,9 @@ export class AppComponent implements OnInit, OnDestroy {
     })  
   
   
-     const  federatedInfo = await Cache.getItem('federatedInfo');
-     const { token } = federatedInfo;
-     console.log('user token : ',token);
+     //const  federatedInfo = await Cache.getItem('federatedInfo');
+     //const { token } = federatedInfo;
+     //console.log('user token : ',token);
   }
 
 

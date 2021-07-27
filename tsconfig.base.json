@@ -27,7 +27,8 @@
       ],
       "@module-federation-ionic/personel/feature/home-page": [
         "libs/personel/feature/home-page/src/index.ts"
-      ]
+      ],
+      "@env-business/*" : ["apps/business/src/environments/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]
