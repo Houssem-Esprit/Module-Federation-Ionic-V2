@@ -8,5 +8,7 @@ module.exports = {
     '<rootDir>/libs/business/feature/home-page',
     '<rootDir>/libs/personel/feature/home-page',
     '<rootDir>/libs/payment/feature/payment/payment',
+    '<rootDir>/libs/shared/feature/transaction',
+    '<rootDir>/libs/shared/data-access/transaction',
   ],
 };

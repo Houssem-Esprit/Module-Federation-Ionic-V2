@@ -57,6 +57,12 @@
     "personel-feature-home-page": {
       "tags": []
     },
+    "shared-data-access-transaction": {
+      "tags": []
+    },
+    "shared-feature-transaction": {
+      "tags": []
+    },
     "shell": {
       "tags": []
     },

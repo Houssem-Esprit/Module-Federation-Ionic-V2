@@ -733,6 +733,56 @@
         }
       }
     },
+    "shared-data-access-transaction": {
+      "projectType": "library",
+      "root": "libs/shared/data-access/transaction",
+      "sourceRoot": "libs/shared/data-access/transaction/src",
+      "prefix": "module-federation-ionic",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/data-access/transaction"],
+          "options": {
+            "jestConfig": "libs/shared/data-access/transaction/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/data-access/transaction/src/**/*.ts",
+              "libs/shared/data-access/transaction/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "shared-feature-transaction": {
+      "projectType": "library",
+      "root": "libs/shared/feature/transaction",
+      "sourceRoot": "libs/shared/feature/transaction/src",
+      "prefix": "module-federation-ionic",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/feature/transaction"],
+          "options": {
+            "jestConfig": "libs/shared/feature/transaction/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/feature/transaction/src/**/*.ts",
+              "libs/shared/feature/transaction/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "shell": {
       "projectType": "application",
       "root": "apps/shell",
@@ -765,7 +815,8 @@
             ],
             "scripts": [],
             "extraWebpackConfig": "apps/shell/webpack.config.js",
-            "commonChunk": false
+            "commonChunk": false,
+            "generatePackageJson": true
           },
           "configurations": {
             "production": {

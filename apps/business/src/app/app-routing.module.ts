@@ -7,6 +7,7 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () =>
+      // change the import path like transaction
       // eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
       import('../../../../libs/business/feature/home-page/src/lib/business-feature-home-page.module').then((m) => m.BusinessFeatureHomePageModule),
   },
@@ -14,6 +15,13 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',
+  },
+
+  {
+    path: 'transaction',
+    loadChildren: () =>
+      // eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
+      import('@module-federation-ionic/shared/feature/transaction').then((m) => m.SharedFeatureTransactionModule),
   },
 
   { path:'payment', 

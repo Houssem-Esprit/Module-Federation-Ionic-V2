@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+    <ion-toolbar style="background-color: goldenrod;">
+        <ion-buttons slot="secondary">
+            <ion-button (click)="createTransaction()" color="primary" size="small">
+                <ion-icon slot="icon-only" name="add-outline"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/home"></ion-back-button>
+        </ion-buttons>
+        <ion-title> Transactions </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-header collapse="condense">
+        <ion-toolbar style="background-color: darkgoldenrod;">
+            <ion-title size="large">Transactions aaaaaaaa</ion-title>
+        </ion-toolbar>
+    </ion-header>
+
+
+    <ion-card *ngFor="let trans of transactions">
+        <ion-card-header>
+            Transaction : - {{trans.date}} -
+        </ion-card-header>
+        <ion-card-content>
+            <ion-card-subtitle>Sender : {{trans.sender}}</ion-card-subtitle>
+            <ion-card-subtitle>Receiver : {{trans.receiver}}</ion-card-subtitle>
+            <ion-card-subtitle>Amount : {{trans.amount}}$</ion-card-subtitle>
+            <br>
+            <ion-button expand="block" routerLink="/transactions" routerDirection="root">Show details
+            </ion-button>
+
+        </ion-card-content>
+    </ion-card>
+
+
+
+</ion-content>

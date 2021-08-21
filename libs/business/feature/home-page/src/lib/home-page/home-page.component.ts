@@ -21,4 +21,9 @@ export class HomePageComponent implements OnInit {
      this.router.navigate(['/payment']);
     }
   }
+
+  onClickTransaction(){
+    this.router.navigate(['/transaction']);
+
+  }
 }

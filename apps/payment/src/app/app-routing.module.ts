@@ -5,6 +5,7 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () =>
+      // eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
       import('../../../../libs/payment/feature/payment/payment/src/lib/payment-feature-payment-payment.module').then((m) => m.PaymentFeaturePaymentPaymentModule),
   },
   {

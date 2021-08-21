@@ -9,7 +9,7 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "types": ["node"],
-    "allowJs": true,  
+    "allowJs": true,
     "noImplicitAny": false,
     "target": "es2015",
     "module": "esnext",
@@ -19,6 +19,7 @@
     "strictPropertyInitialization": false,
     "baseUrl": ".",
     "paths": {
+      "@env-business/*": ["apps/business/src/environments/*"],
       "@module-federation-ionic/business/feature/home-page": [
         "libs/business/feature/home-page/src/index.ts"
       ],
@@ -28,7 +29,12 @@
       "@module-federation-ionic/personel/feature/home-page": [
         "libs/personel/feature/home-page/src/index.ts"
       ],
-      "@env-business/*" : ["apps/business/src/environments/*"]
+      "@module-federation-ionic/shared/data-access/transaction": [
+        "libs/shared/data-access/transaction/src/index.ts"
+      ],
+      "@module-federation-ionic/shared/feature/transaction": [
+        "libs/shared/feature/transaction/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
