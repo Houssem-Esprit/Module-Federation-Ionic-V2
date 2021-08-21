@@ -17,9 +17,9 @@ applications:
             - npm run nx build shell --verbose
         postBuild:
           commands:
-            - npm run nx run shell:add:android
-            - npm run nx run shell:copy:android
-            - npm run nx run shell:sync:android
+            #- npm run nx run shell:add:android
+            #- npm run nx run shell:copy:android
+            #- npm run nx run shell:sync:android
             #- npm run nx run shell:open:android
       artifacts:
         #discard-paths: yes
