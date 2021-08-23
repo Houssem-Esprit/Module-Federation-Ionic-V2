@@ -8,22 +8,22 @@ import { Cache } from 'aws-amplify';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent implements OnInit, OnDestroy {
-  user: CognitoUserInterface | undefined;
-  authState: AuthState;
+  //user: CognitoUserInterface | undefined;
+  //authState: AuthState;
   
   constructor(private ref: ChangeDetectorRef) {}
 
 
 
   ngOnDestroy() {
-    return onAuthUIStateChange;
+    //return onAuthUIStateChange;
   }
   async ngOnInit()  {
-    onAuthUIStateChange((authState, authData) => {
+   /* onAuthUIStateChange((authState, authData) => {
       this.authState = authState;
       this.user = authData as CognitoUserInterface;
       this.ref.detectChanges();
-    })  
+    })  */
   
   
      //const  federatedInfo = await Cache.getItem('federatedInfo');

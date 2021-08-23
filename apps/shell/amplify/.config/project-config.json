@@ -1,4 +1,7 @@
 {
+  "providers": [
+    "awscloudformation"
+  ],
   "projectName": "shell",
   "version": "3.1",
   "frontend": "javascript",
@@ -10,8 +13,5 @@
       "BuildCommand": "npm run nx build shell",
       "StartCommand": "npm run nx serve shell"
     }
-  },
-  "providers": [
-    "awscloudformation"
-  ]
+  }
 }
