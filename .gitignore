@@ -4,7 +4,7 @@
 /dist
 /tmp
 /out-tsc
-
+.change-log
 # dependencies
 /node_modules
 

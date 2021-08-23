@@ -23,7 +23,10 @@ export class HomePageComponent implements OnInit {
   }
 
   onClickTransaction(){
-    this.router.navigate(['/transaction']);
-
+    if(this.router.url.includes('business')){
+      this.router.navigate(['business/transaction']);
+     }else {
+      this.router.navigate(['/transaction']);
+     }
   }
 }
