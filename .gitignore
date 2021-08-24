@@ -5,6 +5,7 @@
 /tmp
 /out-tsc
 .change-log
+.notes
 # dependencies
 /node_modules
 

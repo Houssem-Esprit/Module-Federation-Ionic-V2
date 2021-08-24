@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { environment } from '../environments/environment';
 import { loadRemoteModule } from '@angular-architects/module-federation';
-
+import {AuthGuardGuard} from '@module-federation-ionic/shared/util/guards'
 const routes: Routes = [
   {
     path: 'home',
@@ -14,6 +14,7 @@ const routes: Routes = [
     path: '',
     redirectTo: 'business',
     pathMatch: 'full',
+    canActivate: [AuthGuardGuard]
   },
 
   { path:'business', 

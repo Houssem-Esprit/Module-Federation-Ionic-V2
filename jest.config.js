@@ -10,5 +10,6 @@ module.exports = {
     '<rootDir>/libs/payment/feature/payment/payment',
     '<rootDir>/libs/shared/feature/transaction',
     '<rootDir>/libs/shared/data-access/transaction',
+    '<rootDir>/libs/shared/util/guards',
   ],
 };
