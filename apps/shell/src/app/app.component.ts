@@ -1,7 +1,7 @@
 import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
 import { onAuthUIStateChange, CognitoUserInterface, AuthState } from '@aws-amplify/ui-components';
 import { Cache } from 'aws-amplify';
-
+import {Auth} from '@aws-amplify/auth';
 @Component({
   selector: 'module-federation-ionic-root',
   templateUrl: 'app.component.html',
@@ -10,7 +10,7 @@ import { Cache } from 'aws-amplify';
 export class AppComponent implements OnInit, OnDestroy {
   //user: CognitoUserInterface | undefined;
   //authState: AuthState;
-  
+  user: any;
   constructor(private ref: ChangeDetectorRef) {}
 
 
@@ -29,6 +29,13 @@ export class AppComponent implements OnInit, OnDestroy {
      //const  federatedInfo = await Cache.getItem('federatedInfo');
      //const { token } = federatedInfo;
      //console.log('user token : ',token);
+
+     try {
+      this.user = await Auth.currentAuthenticatedUser();
+      console.log("user", this.user);
+     } catch(e) {
+      console.log("error", e);
+     }
   }
 
 
