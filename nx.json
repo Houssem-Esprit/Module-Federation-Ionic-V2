@@ -60,6 +60,9 @@
     "shared-data-access-transaction": {
       "tags": []
     },
+    "shared-data-access-user": {
+      "tags": []
+    },
     "shared-feature-transaction": {
       "tags": []
     },

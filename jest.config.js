@@ -11,5 +11,6 @@ module.exports = {
     '<rootDir>/libs/shared/feature/transaction',
     '<rootDir>/libs/shared/data-access/transaction',
     '<rootDir>/libs/shared/util/guards',
+    '<rootDir>/libs/shared/data-access/user',
   ],
 };

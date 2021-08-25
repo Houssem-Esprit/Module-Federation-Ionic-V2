@@ -32,6 +32,9 @@
       "@module-federation-ionic/shared/data-access/transaction": [
         "libs/shared/data-access/transaction/src/index.ts"
       ],
+      "@module-federation-ionic/shared/data-access/user": [
+        "libs/shared/data-access/user/src/index.ts"
+      ],
       "@module-federation-ionic/shared/feature/transaction": [
         "libs/shared/feature/transaction/src/index.ts"
       ],
