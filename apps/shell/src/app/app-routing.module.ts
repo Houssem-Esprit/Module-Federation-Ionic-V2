@@ -14,7 +14,7 @@ const routes: Routes = [
     path: '',
     redirectTo: 'business',
     pathMatch: 'full',
-    canActivate: [AuthGuardGuard]
+    //canActivate: [AuthGuardGuard]
   },
 
   { path:'business', 

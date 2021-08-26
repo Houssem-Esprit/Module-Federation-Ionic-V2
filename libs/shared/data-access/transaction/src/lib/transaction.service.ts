@@ -13,7 +13,7 @@ const headers = new HttpHeaders({
   providedIn: 'root'
 })
 export class TransactionService {
-  baseUrl = 'https://k95k7m9y3e.execute-api.us-east-1.amazonaws.com/api/transfers'
+  baseUrl = 'https://szxs1ttcu9.execute-api.us-east-1.amazonaws.com/api/transfers'
   constructor(private httpClient: HttpClient) { }
 
   createTransaction(transaction: Transaction): Observable<Transaction> {

@@ -11,7 +11,9 @@ export class AppComponent implements OnInit, OnDestroy {
   //user: CognitoUserInterface | undefined;
   //authState: AuthState;
   user: any;
-  constructor(private ref: ChangeDetectorRef) {}
+  isUserLoggedIn = false;
+
+  constructor() {}
 
 
 
@@ -19,6 +21,15 @@ export class AppComponent implements OnInit, OnDestroy {
     //return onAuthUIStateChange;
   }
   async ngOnInit()  {
+
+    Auth.currentAuthenticatedUser()
+    .then(user => {
+      console.log(user);
+      this.isUserLoggedIn = true;
+      //this.userName = user?.attributes?.name;
+    })
+    .catch(err => console.log(err))
+
    /* onAuthUIStateChange((authState, authData) => {
       this.authState = authState;
       this.user = authData as CognitoUserInterface;
@@ -29,13 +40,17 @@ export class AppComponent implements OnInit, OnDestroy {
      //const  federatedInfo = await Cache.getItem('federatedInfo');
      //const { token } = federatedInfo;
      //console.log('user token : ',token);
+  }
 
-     try {
-      this.user = await Auth.currentAuthenticatedUser();
-      console.log("user", this.user);
-     } catch(e) {
-      console.log("error", e);
-     }
+  login() {
+    Auth.federatedSignIn();
+  }
+
+  logout() {
+    this.isUserLoggedIn = false;
+    Auth.signOut()
+      .then(data => console.log(data))
+      .catch(err => console.log(err))
   }
 
 
