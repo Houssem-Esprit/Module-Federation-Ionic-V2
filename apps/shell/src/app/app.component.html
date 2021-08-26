@@ -8,16 +8,18 @@
     <amplify-sign-out></amplify-sign-out>
     
   </div> -->
+  <div>
+    <span>Welcome</span>
 
-  <span>Welcome</span>
-  <div class="spacer"></div>
-  <span *ngIf="isUserLoggedIn">
-    <a style="color: rgb(255, 255, 255);padding-right: 29px;" href="javascript:void(0)" (click)="logout()"> logout </a>
-    <ion-router-outlet></ion-router-outlet>
+    <span *ngIf="isUserLoggedIn">
+      <a style="color: crimson;padding-right: 29px;" href="javascript:void(0)" (click)="logout()"> logout </a>
+      <ion-router-outlet></ion-router-outlet>
 
-  </span>
-  <span *ngIf="!isUserLoggedIn">
-    <a style="color: rgb(255, 255, 255);padding-right: 29px;" href="javascript:void(0)" (click)="login()"> Login
-    </a>
-  </span>
+    </span>
+    <span *ngIf="!isUserLoggedIn">
+      <a style="color:blue;padding-right: 29px;" href="javascript:void(0)" (click)="login()"> Login
+      </a>
+      This is some text used as a visual test
+    </span>
+  </div>
 </ion-app>
