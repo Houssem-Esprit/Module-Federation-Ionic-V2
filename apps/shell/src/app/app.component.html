@@ -12,12 +12,12 @@
   <span>Welcome</span>
   <div class="spacer"></div>
   <span *ngIf="isUserLoggedIn">
-    <a style="color: white;padding-right: 29px;" href="javascript:void(0)" (click)="logout()"> logout </a>
+    <a style="color: rgb(255, 255, 255);padding-right: 29px;" href="javascript:void(0)" (click)="logout()"> logout </a>
     <ion-router-outlet></ion-router-outlet>
 
   </span>
   <span *ngIf="!isUserLoggedIn">
-    <a class="login-link" style="color: white;padding-right: 29px;" href="javascript:void(0)" (click)="login()"> Login
+    <a style="color: rgb(255, 255, 255);padding-right: 29px;" href="javascript:void(0)" (click)="login()"> Login
     </a>
   </span>
 </ion-app>
