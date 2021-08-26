@@ -1,8 +1,8 @@
 {
-    "identityPoolName": "shell3ecd1fec_identitypool_3ecd1fec",
+    "identityPoolName": "shell4f0e3757_identitypool_4f0e3757",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "shell3ecd1fec",
-    "userPoolName": "shell3ecd1fec_userpool_3ecd1fec",
+    "resourceNameTruncated": "shell4f0e3757",
+    "userPoolName": "shell4f0e3757_userpool_4f0e3757",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -28,10 +28,10 @@
     "userpoolClientReadAttributes": [
         "email"
     ],
-    "userpoolClientLambdaRole": "shell33ecd1fec_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "shell44f0e3757_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "3ecd1fec",
-    "resourceName": "shell3ecd1fec",
+    "sharedId": "4f0e3757",
+    "resourceName": "shell4f0e3757",
     "authSelections": "identityPoolAndUserPool",
     "authRoleArn": {
         "Fn::GetAtt": [
@@ -46,7 +46,14 @@
         ]
     },
     "useDefault": "defaultSocial",
+    "hostedUI": true,
     "triggers": "{}",
+    "hostedUIDomainName": "auth-domain-ionic-module-federation",
+    "authProvidersUserPool": [
+        "Google"
+    ],
+    "hostedUIProviderMeta": "[{\"ProviderName\":\"Google\",\"authorize_scopes\":\"openid email profile\",\"AttributeMapping\":{\"email\":\"email\",\"username\":\"sub\"}}]",
+    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://master.d275v0hfacbx1p.amplifyapp.com/\"],\"LogoutURLs\":[\"https://master.d275v0hfacbx1p.amplifyapp.com/\"]}",
     "userPoolGroupList": [],
     "serviceName": "Cognito",
     "usernameCaseSensitive": false,
@@ -55,13 +62,5 @@
     },
     "breakCircularDependency": true,
     "permissions": [],
-    "dependsOn": [],
-    "hostedUI": true,
-    "hostedUIDomainName": "poc-nx-ionic-module-federation-hosted-ui-auth",
-    "authProvidersUserPool": [
-        "Google"
-    ],
-    "hostedUIProviderMeta": "[{\"ProviderName\":\"Google\",\"authorize_scopes\":\"openid email profile\",\"AttributeMapping\":{\"email\":\"email\",\"username\":\"sub\"}}]",
-    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://master.d275v0hfacbx1p.amplifyapp.com/\"],\"LogoutURLs\":[\"https://master.d275v0hfacbx1p.amplifyapp.com/\"]}",
-    "authProviders": []
+    "dependsOn": []
 }

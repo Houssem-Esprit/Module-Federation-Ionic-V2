@@ -1,6 +1,6 @@
 {
   "auth": {
-    "shell3ecd1fec": {
+    "shell4f0e3757": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
