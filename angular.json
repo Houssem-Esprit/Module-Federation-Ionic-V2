@@ -9,7 +9,9 @@
       "architect": {
         "build": {
           "builder": "ngx-build-plus:browser",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/business",
             "index": "apps/business/src/index.html",
@@ -104,7 +106,9 @@
         },
         "test": {
           "builder": "ngx-build-plus:karma",
-          "outputs": ["coverage/apps/business"],
+          "outputs": [
+            "coverage/apps/business"
+          ],
           "options": {
             "jestConfig": "apps/business/jest.config.js",
             "passWithNoTests": true,
@@ -215,7 +219,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/business-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/business-e2e/**/*.{js,ts}"
+            ]
           }
         }
       }
@@ -228,7 +234,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/business/feature/home-page"],
+          "outputs": [
+            "coverage/libs/business/feature/home-page"
+          ],
           "options": {
             "jestConfig": "libs/business/feature/home-page/jest.config.js",
             "passWithNoTests": true
@@ -253,7 +261,9 @@
       "architect": {
         "build": {
           "builder": "ngx-build-plus:browser",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/payment",
             "index": "apps/payment/src/index.html",
@@ -348,7 +358,9 @@
         },
         "test": {
           "builder": "ngx-build-plus:karma",
-          "outputs": ["coverage/apps/payment"],
+          "outputs": [
+            "coverage/apps/payment"
+          ],
           "options": {
             "jestConfig": "apps/payment/jest.config.js",
             "passWithNoTests": true,
@@ -459,7 +471,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/payment-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/payment-e2e/**/*.{js,ts}"
+            ]
           }
         }
       }
@@ -472,7 +486,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/payment/feature/payment/payment"],
+          "outputs": [
+            "coverage/libs/payment/feature/payment/payment"
+          ],
           "options": {
             "jestConfig": "libs/payment/feature/payment/payment/jest.config.js",
             "passWithNoTests": true
@@ -497,7 +513,9 @@
       "architect": {
         "build": {
           "builder": "ngx-build-plus:browser",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/personel",
             "index": "apps/personel/src/index.html",
@@ -592,7 +610,9 @@
         },
         "test": {
           "builder": "ngx-build-plus:karma",
-          "outputs": ["coverage/apps/personel"],
+          "outputs": [
+            "coverage/apps/personel"
+          ],
           "options": {
             "jestConfig": "apps/personel/jest.config.js",
             "passWithNoTests": true,
@@ -703,7 +723,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/personel-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/personel-e2e/**/*.{js,ts}"
+            ]
           }
         }
       }
@@ -716,7 +738,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/personel/feature/home-page"],
+          "outputs": [
+            "coverage/libs/personel/feature/home-page"
+          ],
           "options": {
             "jestConfig": "libs/personel/feature/home-page/jest.config.js",
             "passWithNoTests": true
@@ -741,7 +765,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/shared/data-access/transaction"],
+          "outputs": [
+            "coverage/libs/shared/data-access/transaction"
+          ],
           "options": {
             "jestConfig": "libs/shared/data-access/transaction/jest.config.js",
             "passWithNoTests": true
@@ -766,7 +792,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/shared/data-access/user"],
+          "outputs": [
+            "coverage/libs/shared/data-access/user"
+          ],
           "options": {
             "jestConfig": "libs/shared/data-access/user/jest.config.js",
             "passWithNoTests": true
@@ -791,7 +819,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/shared/feature/transaction"],
+          "outputs": [
+            "coverage/libs/shared/feature/transaction"
+          ],
           "options": {
             "jestConfig": "libs/shared/feature/transaction/jest.config.js",
             "passWithNoTests": true
@@ -816,7 +846,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/shared/util/guards"],
+          "outputs": [
+            "coverage/libs/shared/util/guards"
+          ],
           "options": {
             "jestConfig": "libs/shared/util/guards/jest.config.js",
             "passWithNoTests": true
@@ -841,7 +873,9 @@
       "architect": {
         "build": {
           "builder": "ngx-build-plus:browser",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/shell",
             "index": "apps/shell/src/index.html",
@@ -878,7 +912,7 @@
                 {
                   "type": "anyComponentStyle",
                   "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumError": "8kb"
                 }
               ],
               "fileReplacements": [
@@ -936,7 +970,9 @@
         },
         "test": {
           "builder": "ngx-build-plus:karma",
-          "outputs": ["coverage/apps/shell"],
+          "outputs": [
+            "coverage/apps/shell"
+          ],
           "options": {
             "jestConfig": "apps/shell/jest.config.js",
             "passWithNoTests": true,
@@ -1047,7 +1083,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/shell-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/shell-e2e/**/*.{js,ts}"
+            ]
           }
         }
       }
@@ -1060,15 +1098,22 @@
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/test",
             "index": "apps/test/src/index.html",
             "main": "apps/test/src/main.ts",
             "polyfills": "apps/test/src/polyfills.ts",
             "tsConfig": "apps/test/tsconfig.app.json",
-            "assets": ["apps/test/src/favicon.ico", "apps/test/src/assets"],
-            "styles": ["apps/test/src/styles.css"],
+            "assets": [
+              "apps/test/src/favicon.ico",
+              "apps/test/src/assets"
+            ],
+            "styles": [
+              "apps/test/src/styles.css"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -1133,7 +1178,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/test"],
+          "outputs": [
+            "coverage/apps/test"
+          ],
           "options": {
             "jestConfig": "apps/test/jest.config.js",
             "passWithNoTests": true
@@ -1162,7 +1209,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/test-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/test-e2e/**/*.{js,ts}"
+            ]
           }
         }
       }
