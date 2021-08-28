@@ -10,12 +10,12 @@ const routes: Routes = [
       import('./home/home.module').then((m) => m.HomePageModule),
   },
 
-  {
+ /* {
     path: '',
     redirectTo: 'business',
     pathMatch: 'full',
     //canActivate: [AuthGuardGuard]
-  },
+  }, */
 
   { path:'business', 
   loadChildren: () => loadRemoteModule({

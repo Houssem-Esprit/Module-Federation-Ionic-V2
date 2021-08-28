@@ -9,25 +9,32 @@
     
   </div> -->
   <div>
-    <span>Welcome</span>
+    <!--  <span>Welcome</span>
 
     <span *ngIf="isUserLoggedIn">
       <a style="color: crimson;padding-right: 29px;" href="javascript:void(0)" (click)="logout()"> logout </a>
       <ion-router-outlet></ion-router-outlet>
 
-    </span>
+    </span>   -->
 
-    <div *ngIf="!isUserLoggedIn">
+    <div>
       <div id="navbar-top">
         <nav class="navbar navbar-expand-md navbar-light bg-white fixed">
           <div class="container">
             <a class="navbar-brand nav-external" href="#home">CongoPay</a>
             <div id="nav">
-              <ul class="navbar-nav ml-auto">
+
+              <ul *ngIf="!isUserLoggedIn" class="navbar-nav ml-auto">
                 <li class="nav-item active">
                   <a class="nav-link" (click)="login()" href="javascript:void(0)">Login</a>
                 </li>
+              </ul>
 
+              <ul *ngIf="isUserLoggedIn" class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" routerLink="/business" href="javascript:void(0)">Home</a>
+                  <a class="nav-link" (click)="logout()" href="javascript:void(0)">Logout</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -48,4 +55,6 @@
       </section>
     </div>
   </div>
+  <ion-router-outlet></ion-router-outlet>
+
 </ion-app>

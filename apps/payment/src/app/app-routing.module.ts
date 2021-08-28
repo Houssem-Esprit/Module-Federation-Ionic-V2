@@ -17,12 +17,12 @@ const routes: Routes = [
   },
 
   {
-    path: 'stripe_success',
+    path: 'stripeSuccess',
     component: StripePaymentSuccessComponent
   },
 
   {
-    path: 'stripe_failure',
+    path: 'stripeFailure',
     component: StripePaymentFailComponent 
   }
 ];
