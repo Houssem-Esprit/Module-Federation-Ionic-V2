@@ -1,0 +1,56 @@
+<!--  <amplify-authenticator *ngIf="authState !== 'signedin'">
+      <amplify-sign-up header-text="My Custom Sign Up Text" slot="sign-up"></amplify-sign-up>
+      <amplify-sign-in header-text="My Custom Sign In Text" slot="sign-in"></amplify-sign-in>
+    </amplify-authenticator>
+  
+    <div *ngIf="authState === 'signedin' && user" class="App">
+      <amplify-sign-out></amplify-sign-out>
+      
+    </div> -->
+<div>
+    <!--  <span>Welcome</span>
+  
+      <span *ngIf="isUserLoggedIn">
+        <a style="color: crimson;padding-right: 29px;" href="javascript:void(0)" (click)="logout()"> logout </a>
+        <ion-router-outlet></ion-router-outlet>
+  
+      </span>   -->
+
+    <div>
+        <div id="navbar-top">
+            <nav class="navbar navbar-expand-md navbar-light bg-white fixed">
+                <div class="container">
+                    <a class="navbar-brand nav-external" href="#home">CongoPay</a>
+                    <div id="nav">
+
+                        <ul *ngIf="!isUserLoggedIn" class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" (click)="login()" href="javascript:void(0)">Login</a>
+                            </li>
+                        </ul>
+
+                        <ul *ngIf="isUserLoggedIn" class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" routerLink="/business" href="javascript:void(0)">Home</a>
+                                <a class="nav-link" (click)="logout()" href="javascript:void(0)">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <section id="home" class="page overlay">
+            <div class="container">
+                <div class="content cover text-center">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h1 class="mt-0 mb-4">We Are CongoPay</h1>
+                            <a class="mt-0 mb-4 btn btn-transparent text-transparent">Find more</a>
+                            <h3 class="mt-0 mb-0 ">We Are Your Best Choice In The E-Payment World.</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

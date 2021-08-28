@@ -7,9 +7,10 @@ import {AuthGuardGuard} from '@module-federation-ionic/shared/util/guards';
 import {SharedUtilGuardsModule} from '@module-federation-ionic/shared/util/guards';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, LandingPageComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,AmplifyUIAngularModule, SharedUtilGuardsModule ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },AuthGuardGuard],

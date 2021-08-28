@@ -3,6 +3,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { environment } from '../environments/environment';
 import { loadRemoteModule } from '@angular-architects/module-federation';
 import {AuthGuardGuard} from '@module-federation-ionic/shared/util/guards'
+import { LandingPageComponent } from './landing-page/landing-page.component';
 const routes: Routes = [
   {
     path: 'home',
@@ -17,6 +18,11 @@ const routes: Routes = [
     //canActivate: [AuthGuardGuard]
   }, */
 
+   {
+    path: 'landingPage',
+    component: LandingPageComponent
+  }, 
+
   { path:'business', 
   loadChildren: () => loadRemoteModule({
     remoteEntry: `${environment.BUSINESS_APP_ENDPOINT}businessremoteEntry.js`,
@@ -25,11 +31,11 @@ const routes: Routes = [
   }).then(m => m.AppModule)
 //loadChildren: () => import('mfe-app/app-module').then((m) => {return m.AppModule})
 }, 
- /* {
+  {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'landingPage',
     pathMatch: 'full',
-  }, */
+  }, 
 ];
 
 @NgModule({
