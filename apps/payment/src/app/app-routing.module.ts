@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { StripePaymentFailComponent } from './stripe-payment-fail/stripe-payment-fail.component';
+import { StripePaymentSuccessComponent } from './stripe-payment-success/stripe-payment-success.component';
 
 const routes: Routes = [
   {
@@ -13,6 +15,16 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full',
   },
+
+  {
+    path: 'stripe_success',
+    component: StripePaymentSuccessComponent
+  },
+
+  {
+    path: 'stripe_failure',
+    component: StripePaymentFailComponent 
+  }
 ];
 
 @NgModule({
